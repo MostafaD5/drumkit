@@ -1,0 +1,164 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(135deg, #1e1f26, #283149);
+  min-height: 100vh;
+  font-family: 'Arvo', cursive;
+  animation: fadeIn 1s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  text-shadow: 3px 0 #DA0463;
+  margin-top: 60px;
+}
+
+/* Drum set container */
+.set {
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Drum buttons */
+.drum {
+  outline: none;
+  border: none;
+  width: 150px;
+  height: 150px;
+  font-size: 4rem;
+  font-weight: 900;
+  border-radius: 20px;
+  color: #DA0463;
+  background-color: #f0f0f3;
+  box-shadow: inset -5px -5px 15px #ffffff, inset 5px 5px 15px #babec7,
+    0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  text-shadow: 2px 0 #DBEDF3;
+  cursor: pointer;
+}
+
+.drum:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #DA0463, 0 8px 25px rgba(0, 0, 0, 0.5);
+  background-color: #f8f8f8;
+}
+
+/* Active press effect */
+.active {
+  box-shadow: 0 0 25px 5px #DBEDF3;
+  background-color: #e0f7fa;
+  opacity: 0.9;
+}
+
+/* Animation for button press */
+@keyframes drum-hit {
+  0% {
+    transform: scale(1);
+    background-color: #ffffff;
+  }
+
+  50% {
+    transform: scale(0.95);
+    background-color: #DBEDF3;
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: #ffffff;
+  }
+}
+
+/* Footer */
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  margin: 40px 0 10px;
+  opacity: 0.8;
+}
+
+/* Keyboard legend */
+.keys-legend {
+  color: #DBEDF3;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-family: monospace;
+  letter-spacing: 5px;
+  opacity: 0.9;
+}
+
+/* Page fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .drum {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .set {
+    margin: 20% auto;
+    gap: 15px;
+  }
+}
+
+.w {
+  background-image: url("./images/tom1.png");
+
+}
+
+.a {
+  background-image: url("./images/tom2.png");
+}
+
+.s {
+  background-image: url("./images/tom3.png");
+}
+
+.d {
+  background-image: url("./images/tom4.png");
+}
+
+.j {
+  background-image: url("./images/snare.png");
+}
+
+.k {
+  background-image: url("./images/crash.png");
+}
+
+.l {
+  background-image: url("./images/kick.png");
+}
