@@ -20,6 +20,6 @@ Click the buttons or press keys on your keyboard to play different drum sounds!
 - Each key plays a different drum sound!
 
 ## 📸 Demo
-[Live Demo](https://your-live-demo-link.com) *(optional)*
+(https://mostafad5.github.io/drumkit/)
 
 
